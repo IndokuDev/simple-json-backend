@@ -65,7 +65,7 @@ app.get('/api/chats', async (req, res) => {
 });
 
 // ✅ Jalankan HTTPS Server
-https.createServer(sslOptions, app).listen(PORT, '0.0.0.0', () => {
+https.createServer(app).listen(PORT, '0.0.0.0', () => {
   console.log(`✅ HTTPS Server running at:`);
   console.log(`👉 https://localhost:${PORT}`);
   console.log(`Server running on port ${PORT}`);
