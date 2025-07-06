@@ -1,0 +1,182 @@
+{
+  "users": [
+    {
+      "username": "IndokuDev",
+      "password": "12345"
+    },
+    {
+      "username": "udindindindun",
+      "password": "123456"
+    }
+  ],
+  "chats": [
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "halo",
+      "timestamp": 1751796682005
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Lu kek kontol",
+      "timestamp": 1751797122046
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "anjing juga lu",
+      "timestamp": 1751797166446
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Bacot",
+      "timestamp": 1751797193934
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Mwueheheheheh",
+      "timestamp": 1751797208310
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "ngentot",
+      "timestamp": 1751797261284
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Lah njir",
+      "timestamp": 1751797289607
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "woy kontol",
+      "timestamp": 1751797806301
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "apa babi",
+      "timestamp": 1751797823171
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "apa ngentot!",
+      "timestamp": 1751797844750
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "woy!",
+      "timestamp": 1751797853669
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "woy",
+      "timestamp": 1751797979932
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "anjing",
+      "timestamp": 1751798017800
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "woy",
+      "timestamp": 1751798027978
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "p",
+      "timestamp": 1751798030246
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "<bold><anjay>",
+      "timestamp": 1751798045602
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "woy memek",
+      "timestamp": 1751798136275
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Kobtol",
+      "timestamp": 1751798161613
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "I said a kontol sama lo semua",
+      "timestamp": 1751798194499
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "kontol memek",
+      "timestamp": 1751798930209
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "halo",
+      "timestamp": 1751798956670
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "halo",
+      "timestamp": 1751798970633
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Hai",
+      "timestamp": 1751798996995
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Megawati",
+      "timestamp": 1751799011651
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "halo",
+      "timestamp": 1751799015848
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Hai",
+      "timestamp": 1751799027693
+    },
+    {
+      "from": "udindindindun",
+      "to": "IndokuDev",
+      "message": "Bembem",
+      "timestamp": 1751799036677
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "kontol",
+      "timestamp": 1751799213934
+    }
+  ]
+}
