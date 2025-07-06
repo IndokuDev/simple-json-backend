@@ -2,7 +2,6 @@ const express = require('express');
 const fs = require('fs-extra');
 const path = require('path');
 const cors = require('cors');
-const ip = require('ip');
 const https = require('https');
 
 const app = express();
@@ -75,5 +74,6 @@ app.get('/api/chats', async (req, res) => {
 https.createServer(sslOptions, app).listen(PORT, '0.0.0.0', () => {
   console.log(`✅ HTTPS Server running at:`);
   console.log(`👉 https://localhost:${PORT}`);
-  console.log(`👉 https://${ip.address()}:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
+
 });
