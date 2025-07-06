@@ -8,12 +8,6 @@ const app = express();
 const PORT = 3000;
 const DATA_FILE = path.join(__dirname, 'data.json');
 
-// ✅ Sertifikat HTTPS lokal (harus pakai mkcert atau self-signed cert)
-const sslOptions = {
-  key: fs.readFileSync('./cert-key.pem'),
-  cert: fs.readFileSync('./cert.pem')
-};
-
 // ✅ Middleware
 app.use(cors({
   origin: [
