@@ -7,6 +7,10 @@
     {
       "username": "udindindindun",
       "password": "123456"
+    },
+    {
+      "username": "Crazy bro🔥🔥",
+      "password": "orgil"
     }
   ],
   "chats": [
@@ -177,6 +181,24 @@
       "to": "udindindindun",
       "message": "kontol",
       "timestamp": 1751799213934
+    },
+    {
+      "from": "IndokuDev",
+      "to": "Crazy bro🔥🔥",
+      "message": "woy kontol",
+      "timestamp": 1751864139416
+    },
+    {
+      "from": "Crazy bro🔥🔥",
+      "to": "IndokuDev",
+      "message": "Apa kontol",
+      "timestamp": 1751864159285
+    },
+    {
+      "from": "IndokuDev",
+      "to": "Crazy bro🔥🔥",
+      "message": "diam kontol",
+      "timestamp": 1751864167435
     }
   ]
 }
