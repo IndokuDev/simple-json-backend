@@ -12,7 +12,8 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'https://simple-chat-json-psmwc16se-indokudevs-projects.vercel.app',
-    'https://whimsical-kitten-32b639.netlify.app'
+    'https://whimsical-kitten-32b639.netlify.app',
+    'http://127.0.0.1:3000'
   ]
 }));
 app.use(express.json());
