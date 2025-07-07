@@ -12,6 +12,7 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'http://127.0.0.1:3000',
+    'http://localhost:5173',
     'https://simple-chat-json-psmwc16se-indokudevs-projects.vercel.app',
     'https://whimsical-kitten-32b639.netlify.app'
   ]
