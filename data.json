@@ -1,20 +1,53 @@
 {
   "users": [
     {
+      "uid": "e2b73a2d-7ff1-4d70-8e52-b9f7a4ce94f6",
       "username": "IndokuDev",
-      "password": "12345"
+      "password": "12345",
+      "photo_profile": "",
+      "created_at": 1698249211000
     },
     {
+      "uid": "4b0b9055-61a6-45cf-bce1-bd54684c3a4d",
       "username": "udindindindun",
-      "password": "123456"
+      "password": "123456",
+      "photo_profile": "",
+      "created_at": 1709038453000
     },
     {
+      "uid": "ac037f83-1639-44e4-842a-0ddf4f8d9dfc",
       "username": "Crazy bro🔥🔥",
-      "password": "orgil"
+      "password": "orgil",
+      "photo_profile": "",
+      "created_at": 1721102385000
     },
     {
+      "uid": "8cb6dd64-9783-4e58-a7c4-35b2dbe419ff",
       "username": "Ahmad Raghib",
-      "password": "12345"
+      "password": "12345",
+      "photo_profile": "",
+      "created_at": 1712321024000
+    },
+    {
+      "uid": "56e59d0e-f2e4-41f0-8772-bf92f49198b7",
+      "username": "Dimas",
+      "password": "12345",
+      "photo_profile": "",
+      "created_at": 1693725419000
+    },
+    {
+      "uid": "be1983aa-bbb0-4d57-b83c-dae6ab62f8a1",
+      "username": "Mama lemon",
+      "password": "123",
+      "photo_profile": "",
+      "created_at": 1700123456000
+    },
+    {
+      "uid": "fd8c65b0-91c2-4c5f-a43c-ef4055b918ff",
+      "username": "Ahmad",
+      "password": "12345",
+      "photo_profile": "",
+      "created_at": 1725427879000
     }
   ],
   "chats": [
@@ -111,7 +144,7 @@
     {
       "from": "udindindindun",
       "to": "IndokuDev",
-      "message": "<bold><anjay>",
+      "message": "\u003Cbold\u003E\u003Canjay\u003E",
       "timestamp": 1751798045602
     },
     {
@@ -215,6 +248,42 @@
       "to": "IndokuDev",
       "message": "WOY MEMEK",
       "timestamp": 1751865892900
+    },
+    {
+      "from": "Mama lemon",
+      "to": "IndokuDev",
+      "message": "Assalamualaikum",
+      "timestamp": 1751874969870
+    },
+    {
+      "from": "IndokuDev",
+      "to": "Mama lemon",
+      "message": "Apa?",
+      "timestamp": 1751874998631
+    },
+    {
+      "from": "IndokuDev",
+      "to": "Mama lemon",
+      "message": "Waalaikumsalam",
+      "timestamp": 1751875012259
+    },
+    {
+      "from": "IndokuDev",
+      "to": "Mama lemon",
+      "message": "Waalaikumsalam",
+      "timestamp": 1751875012749
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "\u003Cb\u003EKontol\u003Cb\u003E",
+      "timestamp": 1751876466443
+    },
+    {
+      "from": "IndokuDev",
+      "to": "udindindindun",
+      "message": "Halo kontol",
+      "timestamp": 1751881132807
     }
   ]
 }

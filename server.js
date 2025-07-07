@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs-extra');
 const path = require('path');
 const cors = require('cors');
-
+const { v4: uuidv4 } = require('uuid');
 const app = express();
 const PORT = 3000;
 const DATA_FILE = path.join(__dirname, 'data.json');
@@ -37,27 +37,43 @@ app.get('/api/users', async (req, res) => {
 // ✅ REGISTER
 app.post('/api/register', async (req, res) => {
   const { username, password } = req.body;
-  if (!username || !password) return res.status(400).json({ error: 'Username & password required' });
-
   const data = await fs.readJson(DATA_FILE);
-  const exists = data.users.find(u => u.username === username);
-  if (exists) return res.status(400).json({ error: 'Username already exists' });
 
-  data.users.push({ username, password });
+  if (data.users.find(u => u.username === username)) {
+    return res.status(400).json({ error: 'Username already exists' });
+  }
+
+  const uid = uuidv4();
+  const createdAt = Date.now();
+
+  data.users.push({
+    uid,
+    username,
+    password,
+    image: '',
+    createdAt
+  });
+
   await fs.writeJson(DATA_FILE, data, { spaces: 2 });
-  res.json({ success: true });
+
+  res.json({ success: true, uid });
+});
+
+app.get('/api/user/:uid', async (req, res) => {
+  const { uid } = req.params;
+  const data = await fs.readJson(DATA_FILE);
+  const user = data.users.find(u => u.uid === uid);
+  if (!user) return res.status(404).json({ error: 'User not found' });
+  res.json(user);
 });
 
 // ✅ LOGIN
 app.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
-  if (!username || !password) return res.status(400).json({ error: 'Missing credentials' });
-
   const data = await fs.readJson(DATA_FILE);
   const user = data.users.find(u => u.username === username && u.password === password);
   if (!user) return res.status(401).json({ error: 'Invalid credentials' });
-
-  res.json({ success: true });
+  res.json({ success: true, uid: user.uid });
 });
 
 // ✅ SEND CHAT
