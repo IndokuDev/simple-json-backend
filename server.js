@@ -12,7 +12,7 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'http://192.168.29.117:3000',
-    'https://simple-chat-json-otdel5j2y-indokudevs-projects.vercel.app/'
+    'https://simple-chat-json-psmwc16se-indokudevs-projects.vercel.app'
   ]
 }));
 app.use(express.json());
