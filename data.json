@@ -11,6 +11,10 @@
     {
       "username": "Crazy bro🔥🔥",
       "password": "orgil"
+    },
+    {
+      "username": "Ahmad Raghib",
+      "password": "12345"
     }
   ],
   "chats": [
@@ -199,6 +203,18 @@
       "to": "Crazy bro🔥🔥",
       "message": "diam kontol",
       "timestamp": 1751864167435
+    },
+    {
+      "from": "IndokuDev",
+      "to": "Crazy bro🔥🔥",
+      "message": "woy",
+      "timestamp": 1751865531038
+    },
+    {
+      "from": "Ahmad Raghib",
+      "to": "IndokuDev",
+      "message": "WOY MEMEK",
+      "timestamp": 1751865892900
     }
   ]
 }
