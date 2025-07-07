@@ -11,8 +11,8 @@ const DATA_FILE = path.join(__dirname, 'data.json');
 app.use(cors({
   origin: [
     'http://localhost:3000',
-    'http://192.168.29.117:3000',
-    'https://simple-chat-json-psmwc16se-indokudevs-projects.vercel.app'
+    'https://simple-chat-json-psmwc16se-indokudevs-projects.vercel.app',
+    'https://whimsical-kitten-32b639.netlify.app'
   ]
 }));
 app.use(express.json());
