@@ -96,15 +96,17 @@ app.post('/api/chat', async (req, res) => {
 
   res.json({ success: true })
 })
-app.post('/api/delete-chat', (req, res) => {
-  const { from, timestamp } = req.body
-  const chats = readData().chats || []
-  const filtered = chats.filter(c => !(c.from === from && c.timestamp === timestamp))
+
+app.delete('/api/chat', (req, res) => {
+  const { from, timestamp } = req.query
   const data = readData()
-  data.chats = filtered
+  data.chats = data.chats.filter(
+    (c) => !(c.from === from && c.timestamp == timestamp)
+  )
   writeData(data)
   res.json({ success: true })
 })
+
 
 // Run server
 app.listen(PORT, '0.0.0.0', () => {
