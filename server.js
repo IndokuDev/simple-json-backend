@@ -8,7 +8,12 @@ const app = express()
 const PORT = 3000
 const DATA_FILE = path.join(__dirname, 'data.json')
 
-app.use(cors())
+app.use(cors(
+  {
+    origin: '*', 
+    methods: ['GET', 'POST'], 
+  }
+))
 app.use(express.json())
 
 // Ensure data.json exists
