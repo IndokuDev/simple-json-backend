@@ -1,106 +1,98 @@
-const express = require('express');
-const fs = require('fs-extra');
-const path = require('path');
-const cors = require('cors');
-const { v4: uuidv4 } = require('uuid');
-const app = express();
-const PORT = 3000;
-const DATA_FILE = path.join(__dirname, 'data.json');
+const express = require('express')
+const fs = require('fs-extra')
+const cors = require('cors')
+const path = require('path')
+const { v4: uuidv4 } = require('uuid')
 
-// ✅ Middleware
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://127.0.0.1:3000',
-    'http://localhost:5173',
-    'https://simple-chat-json-psmwc16se-indokudevs-projects.vercel.app',
-    'https://whimsical-kitten-32b639.netlify.app'
-  ]
-}));
-app.use(express.json());
+const app = express()
+const PORT = 3000
+const DATA_FILE = path.join(__dirname, 'data.json')
 
-// ✅ Auto init file kalau belum ada
-async function ensureDataFile() {
-  if (!(await fs.pathExists(DATA_FILE))) {
-    await fs.writeJson(DATA_FILE, { users: [], chats: [] }, { spaces: 2 });
-  }
+app.use(cors())
+app.use(express.json())
+
+// Ensure data.json exists
+if (!fs.existsSync(DATA_FILE)) {
+  fs.writeJsonSync(DATA_FILE, { users: [], chats: [] }, { spaces: 2 })
 }
-ensureDataFile();
 
-// ✅ GET semua user (tanpa password)
+// GET all users (without password)
 app.get('/api/users', async (req, res) => {
-  const data = await fs.readJson(DATA_FILE);
-  const users = data.users.map(u => u.username);
-  res.json(users);
-});
+  const data = await fs.readJson(DATA_FILE)
+  const users = data.users.map(u => ({
+    uid: u.uid,
+    username: u.username,
+    photo_profile: u.photo_profile,
+    created_at: u.created_at
+  }))
+  res.json(users)
+})
 
-// ✅ REGISTER
+// Register
 app.post('/api/register', async (req, res) => {
-  const { username, password } = req.body;
-  const data = await fs.readJson(DATA_FILE);
+  const { username, password } = req.body
+  const data = await fs.readJson(DATA_FILE)
 
   if (data.users.find(u => u.username === username)) {
-    return res.status(400).json({ error: 'Username already exists' });
+    return res.status(400).json({ error: 'Username already exists' })
   }
 
-  const uid = uuidv4();
-  const createdAt = Date.now();
-
-  data.users.push({
-    uid,
+  const newUser = {
+    uid: uuidv4(),
     username,
     password,
-    image: '',
-    createdAt
-  });
+    photo_profile: '',
+    created_at: Date.now()
+  }
 
-  await fs.writeJson(DATA_FILE, data, { spaces: 2 });
+  data.users.push(newUser)
+  await fs.writeJson(DATA_FILE, data, { spaces: 2 })
 
-  res.json({ success: true, uid });
-});
+  res.json({ success: true, uid: newUser.uid })
+})
 
-app.get('/api/user/:uid', async (req, res) => {
-  const { uid } = req.params;
-  const data = await fs.readJson(DATA_FILE);
-  const user = data.users.find(u => u.uid === uid);
-  if (!user) return res.status(404).json({ error: 'User not found' });
-  res.json(user);
-});
-
-// ✅ LOGIN
+// Login
 app.post('/api/login', async (req, res) => {
-  const { username, password } = req.body;
-  const data = await fs.readJson(DATA_FILE);
-  const user = data.users.find(u => u.username === username && u.password === password);
-  if (!user) return res.status(401).json({ error: 'Invalid credentials' });
-  res.json({ success: true, uid: user.uid });
-});
+  const { username, password } = req.body
+  const data = await fs.readJson(DATA_FILE)
 
-// ✅ SEND CHAT
-app.post('/api/chat', async (req, res) => {
-  const { from, to, message } = req.body;
-  if (!from || !to || !message) return res.status(400).json({ error: 'Missing fields' });
+  const user = data.users.find(u => u.username === username && u.password === password)
+  if (!user) {
+    return res.status(401).json({ error: 'Invalid credentials' })
+  }
 
-  const data = await fs.readJson(DATA_FILE);
-  data.chats.push({ from, to, message, timestamp: Date.now() });
-  await fs.writeJson(DATA_FILE, data, { spaces: 2 });
+  res.json({ success: true, uid: user.uid })
+})
 
-  res.json({ success: true });
-});
-
-// ✅ GET semua chat
+// GET all chats
 app.get('/api/chats', async (req, res) => {
-  const data = await fs.readJson(DATA_FILE);
-  res.json(data.chats || []);
-});
+  const data = await fs.readJson(DATA_FILE)
+  res.json(data.chats)
+})
 
-// ✅ Optional: Debug - get full data.json
-app.get('/api/data', async (req, res) => {
-  const data = await fs.readJson(DATA_FILE);
-  res.json(data);
-});
+// Send chat
+app.post('/api/chat', async (req, res) => {
+  const { from, to, message } = req.body
+  if (!from || !to || !message) {
+    return res.status(400).json({ error: 'Missing fields' })
+  }
 
-// ✅ Start server
+  const data = await fs.readJson(DATA_FILE)
+
+  const chat = {
+    from,
+    to,
+    message,
+    timestamp: Date.now()
+  }
+
+  data.chats.push(chat)
+  await fs.writeJson(DATA_FILE, data, { spaces: 2 })
+
+  res.json({ success: true })
+})
+
+// Run server
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`✅ Server running at http://localhost:${PORT}`);
-});
+  console.log(`🚀 Server running on http://localhost:${PORT}`)
+})
