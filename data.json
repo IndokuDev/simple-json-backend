@@ -1,4 +1,138 @@
 {
-  "users": [],
-  "chats": []
+  "users": [
+  {
+    "uid": "5e2c3456-e2f6-48a6-addc-1229fc8233a7",
+    "username": "IndokuDev",
+    "photo_profile": "",
+    "created_at": 1751967349387
+  },
+  {
+    "uid": "673ab2a6-0012-47ba-9067-766378775dc6",
+    "username": "Cookie",
+    "photo_profile": "",
+    "created_at": 1751967422999
+  },
+  {
+    "uid": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+    "username": "Fucek ke Abg ",
+    "photo_profile": "",
+    "created_at": 1751967454494
+  }
+],
+  "chats": [
+    {
+      "from": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "to": "5e2c3456-e2f6-48a6-addc-1229fc8233a7",
+      "message": "Hello",
+      "timestamp": 1751967432615
+    },
+    {
+      "from": "5e2c3456-e2f6-48a6-addc-1229fc8233a7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Hey",
+      "timestamp": 1751967450091
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Hai Cookie 0w0",
+      "timestamp": 1751967488781
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Fucek",
+      "timestamp": 1751967520350
+    },
+    {
+      "from": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "to": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "message": "Apa kontol",
+      "timestamp": 1751967522043
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Eh kontol diam lo m***k",
+      "timestamp": 1751967556527
+    },
+    {
+      "from": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "to": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "message": "bacot memek",
+      "timestamp": 1751967560573
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Abg ajg",
+      "timestamp": 1751967572098
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Abg asik juga",
+      "timestamp": 1751967651463
+    },
+    {
+      "from": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "to": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "message": "ariqa kntl",
+      "timestamp": 1751967653256
+    },
+    {
+      "from": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "to": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "message": "bct",
+      "timestamp": 1751967657261
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Abg kntl",
+      "timestamp": 1751967670987
+    },
+    {
+      "from": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "to": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "message": "kentang nasi tahu lontog",
+      "timestamp": 1751967675818
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Kntl",
+      "timestamp": 1751967678504
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Klo abg kontol",
+      "timestamp": 1751967707814
+    },
+    {
+      "from": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "to": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "message": "kamu mekek anjing",
+      "timestamp": 1751967721309
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Crush nya Haiyun haiyun",
+      "timestamp": 1751967742844
+    },
+    {
+      "from": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "to": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "message": "bct",
+      "timestamp": 1751967744563
+    },
+    {
+      "from": "b2bf2854-152a-4995-82c6-a3fb0d18d1f7",
+      "to": "673ab2a6-0012-47ba-9067-766378775dc6",
+      "message": "Yamate kudusai",
+      "timestamp": 1751967831076
+    }
+  ]
 }

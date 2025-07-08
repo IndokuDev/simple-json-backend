@@ -11,7 +11,7 @@ const DATA_FILE = path.join(__dirname, 'data.json')
 app.use(cors(
   {
     origin: '*', 
-    methods: ['GET', 'POST'], 
+    methods: ['GET', 'POST', 'DELETE'], 
   }
 ))
 app.use(express.json())
@@ -94,6 +94,15 @@ app.post('/api/chat', async (req, res) => {
   data.chats.push(chat)
   await fs.writeJson(DATA_FILE, data, { spaces: 2 })
 
+  res.json({ success: true })
+})
+app.post('/api/delete-chat', (req, res) => {
+  const { from, timestamp } = req.body
+  const chats = readData().chats || []
+  const filtered = chats.filter(c => !(c.from === from && c.timestamp === timestamp))
+  const data = readData()
+  data.chats = filtered
+  writeData(data)
   res.json({ success: true })
 })
 
